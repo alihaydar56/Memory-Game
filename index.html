@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 700px;
+        display: flex;
+    }
+
+    .memory-game {
+        width: 640px;
+        height: 640px;
+        position: relative;
+        top: 100px;
+        left: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        perspective: 1000px;
+    }
+
+    .memory-card {
+        width: calc(25% - 10px);
+        height: calc(25% - 10px);
+        margin: 5px;
+        position: relative;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform .5s;
+
+    }
+
+    .memory-card:active {
+        transform: scale(.97);
+        transition: transform .2s;
+    }
+
+    .memory-card.flip {
+        transform: rotateY(180deg);
+    }
+
+
+    .frontimg,
+    .backimg {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        position: absolute;
+
+        background: #1C7CCC;
+        backface-visibility: hidden;
+    }
+
+    .backimg {
+        transform: rotateY(180deg);
+    }
+
+    .timer {
+        position: absolute;
+        top: 30px;
+        left: 600px;
+        margin-bottom: 10px;
+    }
+     .score {
+        position: absolute;
+        top: 30px;
+        left: 800px;
+        margin-bottom: 10px;
+    }
+
+    .btnStart {
+        position: absolute;
+        left: 430px;
+        top: 20px;
+        width: 100px;
+        height: 50px;
+        padding: 20px;
+        background-color: aqua;;
+        color: white;
+        margin-bottom: 10px;
+        text-align: center;
+
+
+    }
+
+    .btnShowAll {
+        position: absolute;
+        top: 20px;
+        left: 910px;
+        width: 100px;
+        height: 50px;
+        padding: 20px;
+        background-color: aqua;
+        color: white;
+
+    }
+    .btnStart:hover,.btnShowAll:hover{
+        cursor: pointer;
+        background-color:#1C7CCC;
+    }
+
+</style>
+
+<body>
+    <span class="timer">time :60</span>
+     <span class="score">score :0</span>
+    <button class="btnStart">Start</button>
+    <button class="btnShowAll">ShowAll</button>
+    <section class="memory-game">
+
+        <div class="memory-card" data-framework="r1">
+            <img class="backimg" src="r1.jpg" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+        <div class="memory-card" data-framework="r2">
+            <img class="backimg" src="r2.jpg" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+        <div class="memory-card" data-framework="r3">
+            <img class="backimg" src="r3.png" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+        <div class="memory-card" data-framework="r4">
+            <img class="backimg" src="r4.jpg" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+        <div class="memory-card" data-framework="r5">
+            <img class="backimg" src="r5.jpg" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+        <div class="memory-card" data-framework="r6">
+            <img class="backimg" src="r6.jpg" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+        <div class="memory-card" data-framework="r7">
+            <img class="backimg" src="r7.jpg" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+        <div class="memory-card" data-framework="r8">
+            <img class="backimg" src="r8.jpg" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+        <div class="memory-card" data-framework="r1">
+            <img class="backimg" src="r1.jpg" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+        <div class="memory-card" data-framework="r2">
+            <img class="backimg" src="r2.jpg" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+        <div class="memory-card" data-framework="r3">
+            <img class="backimg" src="r3.png" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+        <div class="memory-card" data-framework="r4">
+            <img class="backimg" src="r4.jpg" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+        <div class="memory-card" data-framework="r5">
+            <img class="backimg" src="r5.jpg" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+        <div class="memory-card" data-framework="r6">
+            <img class="backimg" src="r6.jpg" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+        <div class="memory-card" data-framework="r7">
+            <img class="backimg" src="r7.jpg" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+        <div class="memory-card" data-framework="r8">
+            <img class="backimg" src="r8.jpg" alt="">
+            <img class="frontimg" src="soruisareti.jpg" alt="">
+        </div>
+    </section>
+
+
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
